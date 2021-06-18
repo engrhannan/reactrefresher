@@ -1,7 +1,10 @@
 import './App.css';
 import Layout from './Components/Layout';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
-import DummyGrid from './Components/DummyGrid';
+import Todos from './Pages/Todos';
+import Posts from './Pages/Posts';
+import Users from './Pages/Users';
+import Home from './Pages/Home';
 
 function App() {
   return (
@@ -9,7 +12,10 @@ function App() {
       <BrowserRouter>
       <Layout>
         <Switch>
-          <Route exact path='/getDummyGrid' component={DummyGrid}></Route>
+        <Route exact path='/gettodos/' component={Todos}></Route>
+        <Route exact  path='/getposts/' component={Posts}></Route>
+        <Route exact  path='/getusers/' component={Users}></Route>
+        <Route  path='/' component={Home}></Route>
         </Switch>
       </Layout>
       </BrowserRouter>
